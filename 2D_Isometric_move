@@ -1,0 +1,110 @@
+
+// Project: 2D_isometricmove 
+// Created: 2017-02-08
+
+// show all errors
+SetErrorMode(2)
+
+// set window properties
+SetWindowTitle( "2D_isometricmove" )
+SetWindowSize( 1024, 768, 0 )
+
+// set display properties
+SetVirtualResolution( 1024, 768 )
+SetOrientationAllowed( 1, 1, 1, 1 )
+SetSyncRate( 30, 0 ) // 30fps instead of 60 to save battery
+UseNewDefaultFonts( 1 ) // since version 2.0.22 we can use nicer default fonts
+
+CreateSprite(1,0)
+SetSPriteSize(1,20,20)
+SetSPriteColor(1,120,50,50,255)
+// position of the player
+CurrentX as float
+CurrentY as float
+CurrentX = 200
+CurrentY = 200
+SetSpritePositionByOffset(1,CurrentX,CurrentY)
+
+// the cursor
+Createsprite(2,0)
+
+Speed = 2
+
+// the case
+CWIDTH =64
+CHEIGHT = 32
+
+do
+    
+    if GetPointerPressed()
+		// the cases of the grid are 64/32
+		X = GetPointerX()/CWIDTH
+		X = X*CWIDTH		
+		Y = GetPointerY()/CHEIGHT
+		Y = Y*CHEIGHT
+		
+		if y>=0
+			if mod(X,CWIDTH) = CWIDTH/2
+				if mod(Y,CHEIGHT) <> CHEIGHT/2			
+					Y = Y + CHEIGHT/2
+				endif
+			elseif mod(X,CWIDTH) = 0					
+				if mod(Y,CHEIGHT) <> 0
+					Y = Y + CHEIGHT/2
+				endif
+			endif
+		else
+			if mod(X,CWIDTH) = CWIDTH/2
+				if mod(Y,CHEIGHT) <> CHEIGHT/2			
+					Y = Y - CHEIGHT/2
+				endif
+			elseif mod(X,CWIDTH) = 0					
+				if mod(Y,CHEIGHT) <> 0
+					Y = Y - CHEIGHT/2
+				endif
+			endif
+		endif
+		nextX = x
+		nextY = y
+		
+		
+		SetSpritePositionByOffset(2,NExtX,NextY)	
+	endif
+    move = 0
+	if nextX > currentX 
+		CurrentX = currentX + speed
+		move = 1		
+	elseif NextX < CurrentX
+		CurrentX = currentX - speed
+		move =1
+	endif
+	if NextY > CurrentY				
+		currentY = currentY + speed
+		move =1
+	else				
+		currentY = currentY - speed
+		move = 1
+	endif
+	if abs(nextX - CurrentX) <= speed
+		CurrentX =nextX
+	endif
+	if abs(nextY - CurrentY) <=speed 
+		CurrentY =nextY
+	endif
+	if move 
+		SetSpritePositionByOffset(1,CurrentX,CurrentY)
+	endif
+
+	// draw the grid
+	For i=0 to 1024/64
+		Drawline(i*64,0,i*64,768,MakeColor(50,50,50),makecolor(50,50,50))
+	next
+	// draw the grid
+	For i=0 to 768/32
+		Drawline(0,i*32,1024,i*32,MakeColor(50,50,50),makecolor(50,50,50))
+	next
+
+	
+    Print( ScreenFPS() )
+    Sync()
+loop
