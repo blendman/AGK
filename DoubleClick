@@ -1,0 +1,66 @@
+
+// Project: doubleclick 
+// Created: 2017-02-03
+
+
+// based on a darkbasic example found on the TGC forum (thegamecreator), adapted for AGK
+
+// show all errors
+SetErrorMode(2)
+
+// set window properties
+SetWindowTitle( "doubleclick" )
+SetWindowSize( 1024, 768, 0 )
+
+// set display properties
+SetVirtualResolution( 1024, 768 )
+SetOrientationAllowed( 1, 1, 1, 1 )
+SetSyncRate( 30, 0 ) // 30fps instead of 60 to save battery
+UseNewDefaultFonts( 1 ) // since version 2.0.22 we can use nicer default fonts
+
+double_speed = 350
+mouseclicked = 0
+txt$ = "nothing"
+time = timer()
+
+n=createsprite(0)
+SetSpriteSize(n,20,20)
+SetSpritePositionByOffset(n, 200,200)
+a =0
+
+
+do
+
+	inc a
+	SetSpritePositionByOffset(n,GetSpriteXByOffset(n)+sin(a),GetSpriteYByOffset(n))
+
+ 
+ 
+	if GetPointerPressed()=1
+	   if mouseclicked = 1
+		  if (timer()-time) < 2 // double_speed/4
+			 mouseclicked = mouseclicked + 1
+		  endif
+	   else
+		  mouseclicked = mouseclicked + 1
+	   endif
+	endif
+	 
+	 
+	if mouseclicked = 0 then time = timer()
+	 
+	if mouseclicked = 2 and (timer()-time) < double_speed
+	   txt$ = "double - clicked"
+	   message("ok")
+	   mouseclicked = 0
+	   doubleclick = 1
+	   time = timer()
+	endif
+	 
+	if timer()-time > 2 then mouseclicked = 0
+	 
+	print(txt$)
+	print(str(timer()-time)+"/"+str(double_speed/4))
+	 
+	sync()
+loop
