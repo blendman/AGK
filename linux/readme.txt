@@ -1,0 +1,1 @@
+This is just a version test. I d'ont have a PC under linux, so I don't know if my version work under linux. Please try it and tell me if it's ok for you ;).
