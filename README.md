@@ -14,22 +14,31 @@ With Age2D, you can create the levels for your games, and you can even add some 
 #ScreenShots & videos
 
 Version 0.39 
+
 ![Age2D v0.39]
 (https://raw.githubusercontent.com/blendman/AGK/master/age2d_0.39.jpg)
 
+
 Version 0.38 (image editor)
+
 ![Age2D v0.38]
 (https://raw.githubusercontent.com/blendman/AGK/master/age2d_0.38.jpg)
 
+
 Version 0.30 (Tiles)
+
 ![Age2D v0.30]
 (https://raw.githubusercontent.com/blendman/AGK/master/age2d_0.30.jpg)
 
+
 Version 0.25 (2D iso)
+
 ![Age2D v0.25]
 (https://raw.githubusercontent.com/blendman/AGK/master/age2d_0.25.jpg)
 
+
 Version 0.13
+
 ![Age2D v0.13]
 (https://raw.githubusercontent.com/blendman/AGK/master/age2d_0.13_8.jpg)
 
