@@ -6,20 +6,29 @@ In this repository, you will find some agk files and one of my project: AGE2D.
 
 #What is age2D ?
 
-Age2D is a 2D game editor for AGK, developped by Blendman (made with AGK2). 
+Age2D is a 2D game editor for AGK, developped by Blendman (made with AGK2), started since january 2017 (last version 0.41. 02/2017). 
+
 
 With Age2D, you can create the levels for your games, and you can even add some gameplays (basic for the moment), like behaviors. You can add physic and virtuel utilities (buttons, joystick) for your games.
 
 #ScreenShots & videos
+Version 0.39 
+![Age2D v0.39](https://github.com/blendman/AGK/age2d_0.39.jpg)
 
-Version 0.25
-![Age2D v0.25](http://blendman.free.fr/dev/agk/age2d/age2d_0.25.jpg)
+Version 0.38 (image editor)
+![Age2D v0.38](https://github.com/blendman/AGK/age2d_0.38.jpg)
+
+Version 0.30 (Tiles)
+![Age2D v0.30](https://github.com/blendman/AGK/age2d_0.30.jpg)
+
+Version 0.25 (2D iso)
+![Age2D v0.25](https://github.com/blendman/AGK/age2d_0.25.jpg)
 
 Version 0.13
-![Age2D v0.13](http://blendman.free.fr/dev/agk/age2d/age2d_0.13_8.jpg)
+![Age2D v0.13](https://github.com/blendman/AGK/age2d_0.13_8.jpg)
 
 Version 0.08
-![Age2D v0.08](http://blendman.free.fr/dev/agk/age2d/age2d_0.08.jpg)
+![Age2D v0.08](https://github.com/blendman/AGK/age2d_0.08.jpg)
 
 
 ![Age2D v0.20](https://youtu.be/IcPyr1vFnoM)
