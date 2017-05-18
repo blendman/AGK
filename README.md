@@ -15,7 +15,7 @@ With Age2D, you can create the levels for your games, and you can even add some 
 
 Version 0.39 
 
-![Age2D v0.39]https://raw.githubusercontent.com/blendman/AGK/master/age2d_0.39.jpg)
+![Age2D v0.39](https://raw.githubusercontent.com/blendman/AGK/master/age2d_0.39.jpg)
 
 
 Version 0.38 (image editor)
